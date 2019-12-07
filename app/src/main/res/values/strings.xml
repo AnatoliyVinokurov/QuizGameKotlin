@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">QuizGameKotlin</string>
+    <string name="start">Начать</string>
 </resources>
