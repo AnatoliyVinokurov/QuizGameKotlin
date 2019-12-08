@@ -3,8 +3,10 @@ package com.anatoliyvinokurov.quizgamekotlin
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.view.WindowManager
 import android.widget.Button
+import android.widget.TextView
 
 class GameLevels : AppCompatActivity() {
 
@@ -26,6 +28,18 @@ class GameLevels : AppCompatActivity() {
             } catch (e:Exception) {
             }
         }
+
+        // button to go to the first level
+        val textView1 = findViewById<TextView>(R.id.textView1)
+        textView1.setOnClickListener{
+            try {
+                val intent = Intent(this@GameLevels, Level1::class.java)
+                startActivity(intent)
+                finish()
+            } catch (e:Exception) {
+            }
+        }
+
 
     }
 
