@@ -1,5 +1,10 @@
-# QuizGameKotlin - Викторина про животных на Kotlin
+﻿# QuizGameKotlin - Викторина про животных на Kotlin
 
 Викторина про животных для Android устройств версии 4.4.2 (KitKat) и выше, написанная исключительно на Kotlin
 * Главный экран с выбором иконки уровня (пока что только первый уровень с жирафом) и кнопкой "старт"
-![Скриншот главного экрана приложения](app/src/main/res/drawable/main_background.jpg)
+![Скриншот главного экрана приложения](app/src/main/res/drawable/screenshot1.png)
+* Экран выбора уровня (30 уровней)
+![Скриншот экрана выбора уровня(app/src/main/res/drawable/screenshot2.png)
+* Экран уровня игры
+![Скриншот экрана выбранного уровня](app/src/main/res/drawable/screenshot3.png)
+
