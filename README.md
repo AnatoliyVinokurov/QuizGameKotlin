@@ -4,7 +4,7 @@
 * Главный экран с выбором иконки уровня (пока что только первый уровень с жирафом) и кнопкой "старт"
 ![Скриншот главного экрана приложения](app/src/main/res/drawable/screenshot1.png)
 * Экран выбора уровня (30 уровней)
-![Скриншот экрана выбора уровня(app/src/main/res/drawable/screenshot2.png)
+![Скриншот экрана выбора уровня](app/src/main/res/drawable/screenshot2.png)
 * Экран уровня игры
 ![Скриншот экрана выбранного уровня](app/src/main/res/drawable/screenshot3.png)
 
