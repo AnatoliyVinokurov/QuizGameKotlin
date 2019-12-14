@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="lvl1text0">Ленивец</string>
+    <string name="lvl1text1">Черепаха</string>
+    <string name="lvl1text2">Панда</string>
+    <string name="lvl1text3">Верблюд</string>
+    <string name="lvl1text4">Бегемот</string>
+    <string name="lvl1text5">Сурикат</string>
+    <string name="lvl1text6">Обезьяна</string>
+    <string name="lvl1text7">Слон</string>
+    <string name="lvl1text8">Бык</string>
+    <string name="lvl1text9">Жираф</string>
+    <string name="lvl1text10">Носорог</string>
+    <string name="lvl1text11">Зебра</string>
+    <string name="lvl1text12">Страус</string>
+    <string name="lvl1text13">Лев</string>
+    <string name="lvl1text14">Гепард</string>
+</resources>
