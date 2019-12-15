@@ -5,6 +5,7 @@ class Array {
     //Array for the first level
     val images1 = intArrayOf(
         R.drawable.onelevel_zero,
+        R.drawable.onelevel_one,
         R.drawable.onelevel_two,
         R.drawable.onelevel_three,
         R.drawable.onelevel_four,
