@@ -6,6 +6,7 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Build
 import android.os.Bundle
+import android.view.MotionEvent
 import android.view.View
 import android.view.Window
 import android.view.WindowManager
@@ -111,6 +112,40 @@ class Level1 : AppCompatActivity() {
         img_right.setImageResource(array.images1[numRight])
         text_right.setText(array.texts1[numRight])
         powerRight = array.power1[numRight]
+
+        // process clicking on the left picture
+        img_left.setOnTouchListener { v, event ->
+            //if touched pictures
+            if (event.action == MotionEvent.ACTION_DOWN) { //touch
+                img_right.isEnabled = false //when touched to the left of the picture, need to lock the clicking the right
+                //checking the correct answer
+                if (powerLeft > powerRight) {
+                    img_left.setImageResource(R.drawable.img_true)
+                } else {
+                    img_left.setImageResource(R.drawable.img_false)
+                }
+            } else if (event.action == MotionEvent.ACTION_UP) { //untouched
+                img_right.isEnabled = true //when unpressed with the finger of the left picture, need to unlock, press the right
+        }
+            true
+        }
+
+        // process clicking on the right picture
+        img_right.setOnTouchListener { v, event ->
+            //if touched pictures
+            if (event.action == MotionEvent.ACTION_DOWN) { //touch
+                img_left.isEnabled = false //when touched to the right of the picture, need to lock the clicking the left
+                //checking the correct answer
+                if (powerRight > powerLeft) {
+                    img_right.setImageResource(R.drawable.img_true)
+                } else {
+                    img_right.setImageResource(R.drawable.img_false)
+                }
+            } else if (event.action == MotionEvent.ACTION_UP) { //untouched
+                img_right.isEnabled = true //when unpressed with the finger of the right picture, need to unlock, press the left
+            }
+            true
+        }
 
     }
     // code for system back button
