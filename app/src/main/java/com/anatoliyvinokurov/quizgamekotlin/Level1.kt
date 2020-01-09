@@ -105,13 +105,13 @@ class Level1 : AppCompatActivity() {
             // button to close the dialog box
             val btnclose = dialog!!.findViewById<View>(R.id.btncloce) as TextView
             btnclose.setOnClickListener {
-                try {
-                    val intent = Intent(this@Level1, GameLevels::class.java)
-                    startActivity(intent)
-                    finish()
-                } catch (e:Exception) {
-                }
-                dialog!!.dismiss() // closes the dialog box
+                    try {
+                        val intent = Intent(this@Level1, GameLevels::class.java)
+                        startActivity(intent)
+                        finish()
+                    } catch (e:Exception) {
+                    }
+                    dialog!!.dismiss() // closes the dialog box
             }
             // continue button
             val btncontinue = dialog!!.findViewById<View>(R.id.btncontinue) as Button
@@ -196,6 +196,95 @@ class Level1 : AppCompatActivity() {
 
                 if (count == 29) { ////if this is the last level, then
                     // Output
+                    countNumberOfStarsInOneLevel()
+                    if (starsLevelOne >= 15){
+                        //call the dialog box at the end of the game
+                        try {
+                            dialog = Dialog(this)//created a new dialog box
+                            dialog!!.requestWindowFeature(Window.FEATURE_NO_TITLE) //hide dialog box title
+                            dialog!!.setContentView(R.layout.enddialog) //the path to the dialog box layout
+                            dialog!!.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT)) //transparent dialog box background
+                            dialog!!.setCancelable(false) // disallow closing the dialog box with the back button
+
+                            //put the text
+                            val textdescription = dialog!!.findViewById<View>(R.id.textdescriptionEnd) as TextView
+                            textdescription.setText(R.string.levelonefinishtrue)
+                            //put the background image
+                            val dialogfom = dialog!!.findViewById<LinearLayout>(R.id.dialogfom)
+                            dialogfom.setBackgroundResource(R.drawable.preview_background_one)
+
+                            // button to close the dialog box
+                            val btnclose = dialog!!.findViewById<View>(R.id.btncloce) as TextView
+                            btnclose.setOnClickListener {
+                                try {
+                                    val intent = Intent(this@Level1, GameLevels::class.java)
+                                    startActivity(intent)
+                                    finish()
+                                } catch (e:Exception) {
+                                }
+                                dialog!!.dismiss() // closes the dialog box
+                            }
+                            // continue button
+                            val btncontinue = dialog!!.findViewById<View>(R.id.btncontinue) as Button
+                            btncontinue.setOnClickListener {
+                                try {
+                                    val intent = Intent(this@Level1, GameLevels::class.java)
+                                    startActivity(intent)
+                                    finish()
+                                } catch (e:Exception) {
+                                }
+                                dialog!!.dismiss() // closes the dialog box
+                            }
+
+                            dialog!!.show()//show dialog box
+                        } catch (e:Exception) {
+                        }
+                    } else {
+                        //call the dialog box at the end of the game
+                        try {
+                            dialog = Dialog(this)//created a new dialog box
+                            dialog!!.requestWindowFeature(Window.FEATURE_NO_TITLE) //hide dialog box title
+                            dialog!!.setContentView(R.layout.enddialog) //the path to the dialog box layout
+                            dialog!!.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT)) //transparent dialog box background
+                            dialog!!.setCancelable(false) // disallow closing the dialog box with the back button
+
+                            //put the text
+                            val textdescription = dialog!!.findViewById<View>(R.id.textdescriptionEnd) as TextView
+                            textdescription.setText(R.string.levelonefinishfalse)
+                            //put the background image
+                            val dialogfom = dialog!!.findViewById<LinearLayout>(R.id.dialogfom)
+                            dialogfom.setBackgroundResource(R.drawable.preview_background_one)
+                            val btncontinue = dialog!!.findViewById<View>(R.id.btncontinue) as Button
+                            btncontinue.setText(R.string.textstartover)
+
+
+                            // button to close the dialog box
+                            val btnclose = dialog!!.findViewById<View>(R.id.btncloce) as TextView
+                            btnclose.setOnClickListener {
+                                try {
+                                    val intent = Intent(this@Level1, GameLevels::class.java)
+                                    startActivity(intent)
+                                    finish()
+                                } catch (e:Exception) {
+                                }
+                                dialog!!.dismiss() // closes the dialog box
+                            }
+                            // continue button
+                            btncontinue.setOnClickListener {
+                                try {
+                                    val intent = Intent(this@Level1, GameLevels::class.java)
+                                    startActivity(intent)
+                                    finish()
+                                } catch (e:Exception) {
+                                }
+                                dialog!!.dismiss() // closes the dialog box
+                            }
+
+                            dialog!!.show()//show dialog box
+                        } catch (e:Exception) {
+                        }
+                    }
+
                 } else {
                     count++ // increase points
                     // put pictures
@@ -242,6 +331,96 @@ class Level1 : AppCompatActivity() {
 
                 if (count == 29) { ////if this is the last level, then
                     // Output
+                    // Output
+                    countNumberOfStarsInOneLevel()
+                    if (starsLevelOne >= 15){
+                        //call the dialog box at the end of the game
+                        try {
+                            dialog = Dialog(this)//created a new dialog box
+                            dialog!!.requestWindowFeature(Window.FEATURE_NO_TITLE) //hide dialog box title
+                            dialog!!.setContentView(R.layout.enddialog) //the path to the dialog box layout
+                            dialog!!.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT)) //transparent dialog box background
+                            dialog!!.setCancelable(false) // disallow closing the dialog box with the back button
+
+                            //put the text
+                            val textdescription = dialog!!.findViewById<View>(R.id.textdescriptionEnd) as TextView
+                            textdescription.setText(R.string.levelonefinishtrue)
+                            //put the background image
+                            val dialogfom = dialog!!.findViewById<LinearLayout>(R.id.dialogfom)
+                            dialogfom.setBackgroundResource(R.drawable.preview_background_one)
+
+                            // button to close the dialog box
+                            val btnclose = dialog!!.findViewById<View>(R.id.btncloce) as TextView
+                            btnclose.setOnClickListener {
+                                try {
+                                    val intent = Intent(this@Level1, GameLevels::class.java)
+                                    startActivity(intent)
+                                    finish()
+                                } catch (e:Exception) {
+                                }
+                                dialog!!.dismiss() // closes the dialog box
+                            }
+                            // continue button
+                            val btncontinue = dialog!!.findViewById<View>(R.id.btncontinue) as Button
+                            btncontinue.setOnClickListener {
+                                try {
+                                    val intent = Intent(this@Level1, GameLevels::class.java)
+                                    startActivity(intent)
+                                    finish()
+                                } catch (e:Exception) {
+                                }
+                                dialog!!.dismiss() // closes the dialog box
+                            }
+
+                            dialog!!.show()//show dialog box
+                        } catch (e:Exception) {
+                        }
+                    } else {
+                        //call the dialog box at the end of the game
+                        try {
+                            dialog = Dialog(this)//created a new dialog box
+                            dialog!!.requestWindowFeature(Window.FEATURE_NO_TITLE) //hide dialog box title
+                            dialog!!.setContentView(R.layout.enddialog) //the path to the dialog box layout
+                            dialog!!.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT)) //transparent dialog box background
+                            dialog!!.setCancelable(false) // disallow closing the dialog box with the back button
+
+                            //put the text
+                            val textdescription = dialog!!.findViewById<View>(R.id.textdescriptionEnd) as TextView
+                            textdescription.setText(R.string.levelonefinishfalse)
+                            //put the background image
+                            val dialogfom = dialog!!.findViewById<LinearLayout>(R.id.dialogfom)
+                            dialogfom.setBackgroundResource(R.drawable.preview_background_one)
+                            val btncontinue = dialog!!.findViewById<View>(R.id.btncontinue) as Button
+                            btncontinue.setText(R.string.textstartover)
+
+
+                            // button to close the dialog box
+                            val btnclose = dialog!!.findViewById<View>(R.id.btncloce) as TextView
+                            btnclose.setOnClickListener {
+                                try {
+                                    val intent = Intent(this@Level1, GameLevels::class.java)
+                                    startActivity(intent)
+                                    finish()
+                                } catch (e:Exception) {
+                                }
+                                dialog!!.dismiss() // closes the dialog box
+                            }
+                            // continue button
+                            btncontinue.setOnClickListener {
+                                try {
+                                    val intent = Intent(this@Level1, GameLevels::class.java)
+                                    startActivity(intent)
+                                    finish()
+                                } catch (e:Exception) {
+                                }
+                                dialog!!.dismiss() // closes the dialog box
+                            }
+
+                            dialog!!.show()//show dialog box
+                        } catch (e:Exception) {
+                        }
+                    }
+
                 } else {
                     count++ // increase points
                     // put pictures
@@ -266,12 +445,124 @@ class Level1 : AppCompatActivity() {
     private fun assignedToThePicturesOfThePlace() {
         when (count) {
             0 -> {
-                numLeft = 5
-                numRight = 6
+                numLeft = 1
+                numRight = 12
             }
             1 -> {
+                numLeft = 10
+                numRight = 2
+            }
+            2 -> {
+                numLeft = 0
+                numRight = 13
+            }
+            3 -> {
+                numLeft = 3
+                numRight = 12
+            }
+            4 -> {
+                numLeft = 7
+                numRight = 1
+            }
+            5 -> {
+                numLeft = 10
+                numRight = 7
+            }
+            6 -> {
+                numLeft = 5
+                numRight = 2
+            }
+            7 -> {
+                numLeft = 6
+                numRight = 10
+            }
+            8 -> {
+                numLeft = 13
+                numRight = 8
+            }
+            9 -> {
+                numLeft = 14
+                numRight = 1
+            }
+            10 -> {
+                numLeft = 12
+                numRight = 14
+            }
+            11 -> {
+                numLeft = 12
+                numRight = 11
+            }
+            12 -> {
+                numLeft = 4
+                numRight = 2
+            }
+            13 -> {
+                numLeft = 4
+                numRight = 6
+            }
+            14 -> {
+                numLeft = 6
+                numRight = 7
+            }
+            15 -> {
                 numLeft = 1
+                numRight = 6
+            }
+            16 -> {
+                numLeft = 7
+                numRight = 12
+            }
+            17 -> {
+                numLeft = 8
+                numRight = 4
+            }
+            18 -> {
+                numLeft = 9
+                numRight = 5
+            }
+            19 -> {
+                numLeft = 14
+                numRight = 10
+            }
+            20 -> {
+                numLeft = 4
+                numRight = 7
+            }
+            21 -> {
+                numLeft = 5
+                numRight = 2
+            }
+            22 -> {
+                numLeft = 3
+                numRight = 13
+            }
+            23 -> {
+                numLeft = 11
+                numRight = 3
+            }
+            24 -> {
+                numLeft = 3
+                numRight = 1
+            }
+            25 -> {
+                numLeft = 12
+                numRight = 8
+            }
+            26 -> {
+                numLeft = 9
+                numRight = 7
+            }
+            27 -> {
+                numLeft = 11
                 numRight = 9
+            }
+            28 -> {
+                numLeft = 9
+                numRight = 12
+            }
+            29 -> {
+                numLeft = 13
+                numRight = 14
             }
             else -> {
                 numLeft = random.nextInt(15)
@@ -283,6 +574,7 @@ class Level1 : AppCompatActivity() {
             }
         }
     }
+
 
     //load the levels array from the save
     private fun loadAnArrayWithLevels() {
@@ -310,6 +602,7 @@ class Level1 : AppCompatActivity() {
     //count the number of stars in the first level
     private fun countNumberOfStarsInOneLevel() {
         //counting the number of stars
+        starsLevelOne = 0
         for (i in 0..29) {
             if (levels[i] == 1) {
                 starsLevelOne++

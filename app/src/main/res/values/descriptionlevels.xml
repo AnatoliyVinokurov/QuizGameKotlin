@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="levelone">Выбери животное, которое бегает быстрее.</string>
+    <string name="levelonefinishtrue">"Поздравляем! Уровень пройден! \n А вы знали, что Гепард является самым быстрым хищником? Во время бега он развивает скорость до 120 км/ч"</string>
+    <string name="levelonefinishfalse">"Уровень не пройден. \n Для доступа к следующему уровню вам не хватает звезд. Попробуйте пройти уровень заново"</string>
 </resources>

@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.View
 import android.view.WindowManager
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import java.util.*
@@ -25,6 +26,10 @@ class GameLevels : AppCompatActivity() {
 
         //loading the levels array from the save
         loadAnArrayWithLevels()
+
+        //set the background image for the first level
+        val imageView = findViewById<ImageView>(R.id.imageView)
+        imageView.setImageResource(R.drawable.main_background)
 
         //An array of elements to display the progress of the game
         val progress = intArrayOf(

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -7,7 +8,8 @@
     android:background="@drawable/preview_background_one"
     android:layout_gravity="center"
     android:scaleType="centerCrop"
-    android:layout_margin="10dp">
+    android:layout_margin="10dp"
+    tools:ignore="MissingDefaultResource">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -30,33 +32,25 @@
             android:textAllCaps="false"
             android:layout_gravity="start"/>
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:id="@+id/previewimg"
-            android:src="@drawable/preview_img_one"
-            android:layout_weight="50"
-            android:layout_marginTop="10dp"/>
         <ScrollView
             android:layout_width="wrap_content"
             android:layout_height="0dp"
-            android:layout_weight="40">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:id="@+id/textdescription"
-                android:text="@string/levelone"
-                android:layout_weight="40"
-                android:textColor="@color/black95"
-                android:textSize="24sp"
-                android:layout_marginTop="10dp"/>
+            android:layout_weight="85"
+            android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/textdescriptionEnd"
+            android:text="@string/levelonefinishtrue"
+            android:textColor="@color/black95"
+            android:textSize="24sp"/>
         </ScrollView>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:id="@+id/btncontinue"
             android:background="@drawable/button_stroke_black95_press_white"
-            android:layout_weight="10"
+            android:layout_weight="15"
             android:text="@string/textcontinue"
             android:textColor="@color/black95"
             android:paddingLeft="10dp"

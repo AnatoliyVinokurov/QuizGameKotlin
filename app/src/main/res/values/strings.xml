@@ -1,8 +1,10 @@
 <resources>
     <string name="app_name">QuizGameKotlin</string>
     <string name="start">Начать</string>
-    <string name="back">Назад</string>
+    <string name="back">&#60;Назад</string>
     <string name="level">Уровень:</string>
+    <string name="exetpress">Нажмите еще раз, чтобы выйти</string>
     <string name="level1">Уровень 1</string>
     <string name="textcontinue">Продолжить</string>
+    <string name="textstartover">Начать заново</string>
 </resources>
