@@ -15,4 +15,21 @@
     <string name="lvl1text12">Страус</string>
     <string name="lvl1text13">Лев</string>
     <string name="lvl1text14">Гепард</string>
+
+    <string name="lvl2text0">Каракул</string>
+    <string name="lvl2text1">Жираф</string>
+    <string name="lvl2text2">Щенок</string>
+    <string name="lvl2text3">Тигр</string>
+    <string name="lvl2text4">Лемур</string>
+    <string name="lvl2text5">Кенгуру</string>
+    <string name="lvl2text6">Заяц</string>
+    <string name="lvl2text7">Козлик</string>
+    <string name="lvl2text8">Лошадь</string>
+    <string name="lvl2text9">Котенок</string>
+    <string name="lvl2text10">Антилопа</string>
+    <string name="lvl2text11">Лиса</string>
+    <string name="lvl2text12">Рысь</string>
+    <string name="lvl2text13">Дельфин</string>
+    <string name="lvl2text14">Пингвин</string>
+    <string name="lvl2text15">Гепард</string>
 </resources>

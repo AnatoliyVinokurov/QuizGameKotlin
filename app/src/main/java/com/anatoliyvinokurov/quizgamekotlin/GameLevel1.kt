@@ -12,7 +12,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import java.util.*
 
-class GameLevels : AppCompatActivity() {
+class GameLevel1 : AppCompatActivity() {
     var levels = IntArray(30) // created an array containing answers (correct/incorrect/ and unanswered)
     private lateinit var sPref: SharedPreferences
 
@@ -29,7 +29,7 @@ class GameLevels : AppCompatActivity() {
 
         //set the background image for the first level
         val imageView = findViewById<ImageView>(R.id.imageView)
-        imageView.setImageResource(R.drawable.main_background)
+        imageView.setImageResource(R.drawable.main_background_level1)
 
         //An array of elements to display the progress of the game
         val progress = intArrayOf(
@@ -63,7 +63,7 @@ class GameLevels : AppCompatActivity() {
         val buttonStart = findViewById<Button>(R.id.button_back)
         buttonStart.setOnClickListener {
             try {
-                val intent = Intent(this@GameLevels, MainActivity::class.java)
+                val intent = Intent(this@GameLevel1, MainActivity::class.java)
                 startActivity(intent)
                 finish()
             } catch (e:Exception) {
@@ -104,7 +104,7 @@ class GameLevels : AppCompatActivity() {
         val textView30 = findViewById<View>(R.id.textView30) as TextView
 
         //create an intent that performs the transition to the first-level
-        val intent = Intent(this@GameLevels, Level1::class.java)
+        val intent = Intent(this@GameLevel1, Level1::class.java)
 
         //find out which element the user clicked on
         val onClickListener =
@@ -344,7 +344,7 @@ class GameLevels : AppCompatActivity() {
     // code for system back button
     override fun onBackPressed() {
         try {
-            val intent = Intent(this@GameLevels, MainActivity::class.java)
+            val intent = Intent(this@GameLevel1, MainActivity::class.java)
             startActivity(intent)
             finish()
         } catch (e:Exception) {

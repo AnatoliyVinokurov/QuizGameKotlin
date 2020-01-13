@@ -35,15 +35,16 @@
         <ScrollView
             android:layout_width="wrap_content"
             android:layout_height="0dp"
-            android:layout_weight="85"
+            android:layout_weight="80"
             android:layout_marginTop="10dp">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/textdescriptionEnd"
-            android:text="@string/levelonefinishtrue"
-            android:textColor="@color/black95"
-            android:textSize="24sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="80"
+                android:id="@+id/textdescriptionEnd"
+                android:text="@string/levelonefinishtrue"
+                android:textColor="@color/black95"
+                android:textSize="24sp"/>
         </ScrollView>
         <Button
             android:layout_width="wrap_content"
@@ -54,10 +55,11 @@
             android:text="@string/textcontinue"
             android:textColor="@color/black95"
             android:paddingLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
             android:paddingRight="10dp"
             android:textAllCaps="true"
-            android:textSize="24sp"
-            android:layout_marginTop="10dp" />
+            android:textSize="24sp" />
 
     </LinearLayout>
 

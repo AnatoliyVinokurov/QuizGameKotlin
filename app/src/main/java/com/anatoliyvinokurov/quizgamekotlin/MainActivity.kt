@@ -3,7 +3,6 @@ package com.anatoliyvinokurov.quizgamekotlin
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.view.WindowManager
 import android.widget.Button
 import android.widget.Toast
@@ -25,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         val buttonStart = findViewById<Button>(R.id.button_start)
         buttonStart.setOnClickListener {
             try {
-                val intent = Intent(this@MainActivity, GameLevels::class.java)
+                val intent = Intent(this@MainActivity, GameLevel1::class.java)
                 startActivity(intent)
                 finish()
             } catch (e:Exception) {
