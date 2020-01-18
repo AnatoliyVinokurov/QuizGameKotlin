@@ -80,4 +80,43 @@ class Array {
         R.string.lvl2text14,
         R.string.lvl2text15
     )
+
+    //Array for the third level
+    val images3 = intArrayOf(
+        R.drawable.threelevel_zero,
+        R.drawable.threelevel_one,
+        R.drawable.threelevel_two,
+        R.drawable.threelevel_three,
+        R.drawable.threelevel_four,
+        R.drawable.threelevel_fife,
+        R.drawable.threelevel_six,
+        R.drawable.threelevel_seven,
+        R.drawable.threelevel_eight,
+        R.drawable.threelevel_nine,
+        R.drawable.threelevel_ten,
+        R.drawable.threelevel_eleven,
+        R.drawable.threelevel_twelve,
+        R.drawable.threelevel_thirteen,
+        R.drawable.threelevel_fourteen
+    )
+
+    val power3 = intArrayOf(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14)
+
+    val texts3 = intArrayOf(
+        R.string.lvl3text0,
+        R.string.lvl3text1,
+        R.string.lvl3text2,
+        R.string.lvl3text3,
+        R.string.lvl3text4,
+        R.string.lvl3text5,
+        R.string.lvl3text6,
+        R.string.lvl3text7,
+        R.string.lvl3text8,
+        R.string.lvl3text9,
+        R.string.lvl3text10,
+        R.string.lvl3text11,
+        R.string.lvl3text12,
+        R.string.lvl3text13,
+        R.string.lvl3text14
+    )
 }

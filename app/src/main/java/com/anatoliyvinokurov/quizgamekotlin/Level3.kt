@@ -20,7 +20,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import java.util.*
 
-class Level2 : AppCompatActivity() {
+class Level3 : AppCompatActivity() {
 
     var dialog: Dialog? = null
     var dialogEndTrue: Dialog? = null
@@ -33,7 +33,7 @@ class Level2 : AppCompatActivity() {
     var random = Random()
     var count = 0 // correct answer counter
     var levels = IntArray(30) // created an array containing answers (correct/incorrect/ and unanswered)
-    var starsLevelTwo = 0
+    var starsLevelThree = 0
 
     private lateinit var sPref: SharedPreferences
     var str = StringBuilder()
@@ -57,11 +57,11 @@ class Level2 : AppCompatActivity() {
 
         //Create a variable text_levels
         val text_levels = findViewById<TextView>(R.id.text_levels)
-        text_levels.setText(R.string.level2)
+        text_levels.setText(R.string.level3)
 
         //set the background image for the first level
         val background = findViewById<ImageView>(R.id.background)
-        background.setImageResource(R.drawable.level2)
+        background.setImageResource(R.drawable.level3)
 
         val img_left = findViewById<ImageView>(R.id.img_left)
         val img_right = findViewById<ImageView>(R.id.img_right)
@@ -79,7 +79,7 @@ class Level2 : AppCompatActivity() {
         val buttonStart = findViewById<Button>(R.id.button_back)
         buttonStart.setOnClickListener {
             try {
-                val intent = Intent(this@Level2, GameLevel2::class.java)
+                val intent = Intent(this@Level3, GameLevel3::class.java)
                 startActivity(intent)
                 finish()
             } catch (e:Exception) {
@@ -95,19 +95,19 @@ class Level2 : AppCompatActivity() {
 
             //put the image
             val previewimg = dialog!!.findViewById<ImageView>(R.id.previewimg)
-            previewimg.setImageResource(R.drawable.preview_img_two)
+            previewimg.setImageResource(R.drawable.preview_img_three)
             //put the text
             val textdescription = dialog!!.findViewById<View>(R.id.textdescription) as TextView
-            textdescription.setText(R.string.leveltwo)
+            textdescription.setText(R.string.levelthree)
             //put the background image
             val dialogfom = dialog!!.findViewById<LinearLayout>(R.id.dialogfom)
-            dialogfom.setBackgroundResource(R.drawable.preview_background_two)
+            dialogfom.setBackgroundResource(R.drawable.preview_background_three)
 
             // button to close the dialog box
             val btnclose = dialog!!.findViewById<View>(R.id.btncloce) as TextView
             btnclose.setOnClickListener {
                     try {
-                        val intent = Intent(this@Level2, GameLevel2::class.java)
+                        val intent = Intent(this@Level3, GameLevel3::class.java)
                         startActivity(intent)
                         finish()
                     } catch (e:Exception) {
@@ -135,16 +135,16 @@ class Level2 : AppCompatActivity() {
 
         //put the text
         val textdescriptionEndTrue = dialogEndTrue!!.findViewById<View>(R.id.textdescriptionEnd) as TextView
-        textdescriptionEndTrue.setText(R.string.leveltwofinishtrue)
+        textdescriptionEndTrue.setText(R.string.levelthreefinishtrue)
         //put the background image
         val dialogfomEndTrue = dialogEndTrue!!.findViewById<LinearLayout>(R.id.dialogfom)
-        dialogfomEndTrue.setBackgroundResource(R.drawable.preview_background_two)
+        dialogfomEndTrue.setBackgroundResource(R.drawable.preview_background_three)
 
         // button to close the dialog box
         val btncloseEndTrue = dialogEndTrue!!.findViewById<View>(R.id.btncloce) as TextView
         btncloseEndTrue.setOnClickListener {
             try {
-                val intent = Intent(this@Level2, GameLevel2::class.java)
+                val intent = Intent(this@Level3, GameLevel3::class.java)
                 startActivity(intent)
                 finish()
             } catch (e:Exception) {
@@ -155,7 +155,7 @@ class Level2 : AppCompatActivity() {
         val btncontinueEndTrue = dialogEndTrue!!.findViewById<View>(R.id.btncontinue) as Button
         btncontinueEndTrue.setOnClickListener {
             try {
-                val intent = Intent(this@Level2, Level3::class.java)
+                val intent = Intent(this@Level3, GameLevel3::class.java)
                 intent.putExtra("count", 0)
                 startActivity(intent)
                 finish()
@@ -177,7 +177,7 @@ class Level2 : AppCompatActivity() {
         textdescriptionEndFalse.setText(R.string.levelonefinishfalse)
         //put the background image
         val dialogfomEndFalse = dialogEndFalse!!.findViewById<LinearLayout>(R.id.dialogfom)
-        dialogfomEndFalse.setBackgroundResource(R.drawable.preview_background_two)
+        dialogfomEndFalse.setBackgroundResource(R.drawable.preview_background_three)
         val btncontinueEndFalse = dialogEndFalse!!.findViewById<View>(R.id.btncontinue) as Button
         btncontinueEndFalse.setText(R.string.textstartover)
 
@@ -186,7 +186,7 @@ class Level2 : AppCompatActivity() {
         val btncloseEndFalse = dialogEndFalse!!.findViewById<View>(R.id.btncloce) as TextView
         btncloseEndFalse.setOnClickListener {
             try {
-                val intent = Intent(this@Level2, GameLevel2::class.java)
+                val intent = Intent(this@Level3, GameLevel3::class.java)
                 startActivity(intent)
                 finish()
             } catch (e:Exception) {
@@ -199,13 +199,13 @@ class Level2 : AppCompatActivity() {
             dialogEndFalse!!.dismiss() // closes the dialog box
             //code to insert images from Array to screen
             assignedToThePicturesOfThePlace()//method for placing picture numbers
-            img_left.setImageResource(array.images2[numLeft]) //Get from the array images 1 picture under the number generated randomly numLeft
-            text_left.setText(array.texts2[numLeft]) //Get from array texts1 the inscription under the number generated randomly by numLeft
-            powerLeft = array.power2[numLeft] ////Get from the array power 1 power value under the number generated randomly numLeft
+            img_left.setImageResource(array.images3[numLeft]) //Get from the array images 1 picture under the number generated randomly numLeft
+            text_left.setText(array.texts3[numLeft]) //Get from array texts1 the inscription under the number generated randomly by numLeft
+            powerLeft = array.power3[numLeft] ////Get from the array power 1 power value under the number generated randomly numLeft
 
-            img_right.setImageResource(array.images2[numRight])
-            text_right.setText(array.texts2[numRight])
-            powerRight = array.power2[numRight]
+            img_right.setImageResource(array.images3[numRight])
+            text_right.setText(array.texts3[numRight])
+            powerRight = array.power3[numRight]
         }
 
         //An array of elements to display the progress of the game
@@ -219,17 +219,17 @@ class Level2 : AppCompatActivity() {
         )
 
         //Animation
-        val a = AnimationUtils.loadAnimation(this@Level2, R.anim.alpha)
+        val a = AnimationUtils.loadAnimation(this@Level3, R.anim.alpha)
 
         //code to insert images from Array to screen
         assignedToThePicturesOfThePlace()//method for placing picture numbers
-        img_left.setImageResource(array.images2[numLeft]) //Get from the array images 1 picture under the number generated randomly numLeft
-        text_left.setText(array.texts2[numLeft]) //Get from array texts1 the inscription under the number generated randomly by numLeft
-        powerLeft = array.power2[numLeft] ////Get from the array power 1 power value under the number generated randomly numLeft
+        img_left.setImageResource(array.images3[numLeft]) //Get from the array images 1 picture under the number generated randomly numLeft
+        text_left.setText(array.texts3[numLeft]) //Get from array texts1 the inscription under the number generated randomly by numLeft
+        powerLeft = array.power3[numLeft] ////Get from the array power 1 power value under the number generated randomly numLeft
 
-        img_right.setImageResource(array.images2[numRight])
-        text_right.setText(array.texts2[numRight])
-        powerRight = array.power2[numRight]
+        img_right.setImageResource(array.images3[numRight])
+        text_right.setText(array.texts3[numRight])
+        powerRight = array.power3[numRight]
 
         //Paint the elements from the progress array
         for (i in 0..29) {
@@ -278,7 +278,7 @@ class Level2 : AppCompatActivity() {
                 if (count == 29) { ////if this is the last level, then
                     // Output
                     countNumberOfStarsInOneLevel()
-                    if (starsLevelTwo >= 15){
+                    if (starsLevelThree >= 15){
                         //call the dialog box at the end of the game if the user has completed the level correctly (true)
                         dialogEndTrue!!.show()
                     } else {
@@ -290,14 +290,14 @@ class Level2 : AppCompatActivity() {
                     count++ // increase points
                     // put pictures
                     assignedToThePicturesOfThePlace()
-                    img_left.setImageResource(array.images2[numLeft])
+                    img_left.setImageResource(array.images3[numLeft])
                     img_left.startAnimation(a) //start animation
-                    text_left.setText(array.texts2[numLeft])
-                    powerLeft = array.power2[numLeft]
-                    img_right.setImageResource(array.images2[numRight])
+                    text_left.setText(array.texts3[numLeft])
+                    powerLeft = array.power3[numLeft]
+                    img_right.setImageResource(array.images3[numRight])
                     img_right.startAnimation(a) //start animation
-                    text_right.setText(array.texts2[numRight])
-                    powerRight = array.power2[numRight]
+                    text_right.setText(array.texts3[numRight])
+                    powerRight = array.power3[numRight]
                 }
                 img_right.isEnabled = true //when unpressed with the finger of the left picture, need to unlock, press the right
         }
@@ -333,7 +333,7 @@ class Level2 : AppCompatActivity() {
                 if (count == 29) { ////if this is the last level, then
                     // Output
                     countNumberOfStarsInOneLevel()
-                    if (starsLevelTwo >= 15){
+                    if (starsLevelThree >= 15){
                         //call the dialog box at the end of the game if the user has completed the level correctly (true)
                         dialogEndTrue!!.show()
                     } else {
@@ -345,14 +345,14 @@ class Level2 : AppCompatActivity() {
                     count++ // increase points
                     // put pictures
                     assignedToThePicturesOfThePlace()
-                    img_left.setImageResource(array.images2[numLeft])
+                    img_left.setImageResource(array.images3[numLeft])
                     img_left.startAnimation(a) //start animation
-                    text_left.setText(array.texts2[numLeft])
-                    powerLeft = array.power2[numLeft]
-                    img_right.setImageResource(array.images2[numRight])
+                    text_left.setText(array.texts3[numLeft])
+                    powerLeft = array.power3[numLeft]
+                    img_right.setImageResource(array.images3[numRight])
                     img_right.startAnimation(a) //start animation
-                    text_right.setText(array.texts2[numRight])
-                    powerRight = array.power2[numRight]
+                    text_right.setText(array.texts3[numRight])
+                    powerRight = array.power3[numRight]
                 }
                 img_left.isEnabled = true //when unpressed with the finger of the right picture, need to unlock, press the left
             }
@@ -365,130 +365,130 @@ class Level2 : AppCompatActivity() {
     private fun assignedToThePicturesOfThePlace() {
         when (count) {
             0 -> {
-                numLeft = 0
-                numRight = 11
+                numLeft = 11
+                numRight = 1
             }
             1 -> {
-                numLeft = 2
-                numRight = 9
-            }
-            2 -> {
-                numLeft = 6
-                numRight = 0
-            }
-            3 -> {
-                numLeft = 1
-                numRight = 8
-            }
-            4 -> {
-                numLeft = 15
-                numRight = 3
-            }
-            5 -> {
-                numLeft = 7
+                numLeft = 3
                 numRight = 14
             }
-            6 -> {
-                numLeft = 5
+            2 -> {
+                numLeft = 7
                 numRight = 12
             }
-            7 -> {
-                numLeft = 14
-                numRight = 6
+            3 -> {
+                numLeft = 9
+                numRight = 0
             }
-            8 -> {
-                numLeft = 7
-                numRight = 13
-            }
-            9 -> {
-                numLeft = 15
-                numRight = 8
-            }
-            10 -> {
+            4 -> {
                 numLeft = 2
                 numRight = 10
             }
-            11 -> {
-                numLeft = 3
-                numRight = 12
-            }
-            12 -> {
-                numLeft = 11
+            5 -> {
+                numLeft = 13
                 numRight = 4
             }
-            13 -> {
-                numLeft = 13
+            6 -> {
+                numLeft = 10
                 numRight = 5
             }
-            14 -> {
+            7 -> {
                 numLeft = 6
-                numRight = 15
-            }
-            15 -> {
-                numLeft = 7
-                numRight = 0
-            }
-            16 -> {
-                numLeft = 1
-                numRight = 11
-            }
-            17 -> {
-                numLeft = 1
-                numRight = 7
-            }
-            18 -> {
-                numLeft = 1
-                numRight = 6
-            }
-            19 -> {
-                numLeft = 3
-                numRight = 0
-            }
-            20 -> {
-                numLeft = 9
-                numRight = 13
-            }
-            21 -> {
-                numLeft = 14
                 numRight = 9
             }
-            22 -> {
-                numLeft = 10
-                numRight = 1
+            8 -> {
+                numLeft = 1
+                numRight = 9
             }
-            23 -> {
-                numLeft = 13
+            9 -> {
+                numLeft = 11
+                numRight = 3
+            }
+            10 -> {
+                numLeft = 0
                 numRight = 8
             }
-            24 -> {
-                numLeft = 9
-                numRight = 15
-            }
-            25 -> {
-                numLeft = 14
-                numRight = 8
-            }
-            26 -> {
+            11 -> {
                 numLeft = 2
-                numRight = 11
-            }
-            27 -> {
-                numLeft = 3
                 numRight = 13
             }
+            12 -> {
+                numLeft = 7
+                numRight = 3
+            }
+            13 -> {
+                numLeft = 1
+                numRight = 12
+            }
+            14 -> {
+                numLeft = 7
+                numRight = 14
+            }
+            15 -> {
+                numLeft = 12
+                numRight = 8
+            }
+            16 -> {
+                numLeft = 7
+                numRight = 9
+            }
+            17 -> {
+                numLeft = 9
+                numRight = 12
+            }
+            18 -> {
+                numLeft = 11
+                numRight = 5
+            }
+            19 -> {
+                numLeft = 4
+                numRight = 10
+            }
+            20 -> {
+                numLeft = 8
+                numRight = 1
+            }
+            21 -> {
+                numLeft = 2
+                numRight = 7
+            }
+            22 -> {
+                numLeft = 3
+                numRight = 9
+            }
+            23 -> {
+                numLeft = 0
+                numRight = 5
+            }
+            24 -> {
+                numLeft = 10
+                numRight = 12
+            }
+            25 -> {
+                numLeft = 13
+                numRight = 9
+            }
+            26 -> {
+                numLeft = 11
+                numRight = 14
+            }
+            27 -> {
+                numLeft = 10
+                numRight = 6
+            }
             28 -> {
-                numLeft = 14
-                numRight = 4
+                numLeft = 5
+                numRight = 12
             }
             29 -> {
-                numLeft = 5
-                numRight = 15
+                numLeft = 14
+                numRight = 12
             }
             else -> {
-                numLeft = random.nextInt(16)
-                numRight = random.nextInt(16)
+                numLeft = random.nextInt(15)
+                numRight = random.nextInt(15)
                 while (numLeft == numRight) {
-                    numRight = random.nextInt(16)
+                    numRight = random.nextInt(15)
                 }
             }
         }
@@ -499,7 +499,7 @@ class Level2 : AppCompatActivity() {
     private fun loadAnArrayWithLevels() {
         try {
             sPref = getSharedPreferences("dsd", Context.MODE_PRIVATE)
-            var savedString: String = sPref.getString("level_two", "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0").toString()
+            var savedString: String = sPref.getString("level_three", "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0").toString()
             val st = StringTokenizer(savedString, ",")
             for (i in 0..29) {
                 levels[i] = st.nextToken().toInt()
@@ -514,23 +514,23 @@ class Level2 : AppCompatActivity() {
             str.append(levels[i]).append(",")
         }
         val ed = sPref.edit()
-        ed.putString("level_two", str.toString())
+        ed.putString("level_three", str.toString())
         ed.commit()
     }
 
     //count the number of stars in the first level
     private fun countNumberOfStarsInOneLevel() {
         //counting the number of stars
-        starsLevelTwo = 0
+        starsLevelThree = 0
         for (i in 0..29) {
             if (levels[i] == 1) {
-                starsLevelTwo++
+                starsLevelThree++
             }
         }
         //save the value of the number of stars
         sPref = getSharedPreferences("dsd", Context.MODE_PRIVATE)
         val ed = sPref.edit()
-        ed.putInt("StarsInTwoLevel", starsLevelTwo)
+        ed.putInt("StarsInThreeLevel", starsLevelThree)
         ed.commit()
     }
 
@@ -538,7 +538,7 @@ class Level2 : AppCompatActivity() {
     // code for system back button
     override fun onBackPressed() {
         try {
-            val intent = Intent(this@Level2, GameLevel2::class.java)
+            val intent = Intent(this@Level3, GameLevel3::class.java)
             startActivity(intent)
             finish()
         } catch (e:Exception) {

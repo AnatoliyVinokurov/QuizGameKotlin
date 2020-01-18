@@ -32,4 +32,20 @@
     <string name="lvl2text13">Дельфин</string>
     <string name="lvl2text14">Пингвин</string>
     <string name="lvl2text15">Гепард</string>
+
+    <string name="lvl3text0">Белка</string>
+    <string name="lvl3text1">Лемур</string>
+    <string name="lvl3text2">Красная панда</string>
+    <string name="lvl3text3">Квокка</string>
+    <string name="lvl3text4">Коала</string>
+    <string name="lvl3text5">Бурундук</string>
+    <string name="lvl3text6">Козлик</string>
+    <string name="lvl3text7">Енот</string>
+    <string name="lvl3text8">Заяц</string>
+    <string name="lvl3text9">Кошка</string>
+    <string name="lvl3text10">Гепард</string>
+    <string name="lvl3text11">Бульдог</string>
+    <string name="lvl3text12">Лиса</string>
+    <string name="lvl3text13">Лев</string>
+    <string name="lvl3text14">Жираф</string>
 </resources>
