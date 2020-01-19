@@ -13,16 +13,25 @@
         android:scaleType="centerCrop"
         android:src="@drawable/main_background_level1"/>
 
-    <ImageView
-        android:id="@+id/main_img_giraffe"
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/slideViewPager"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="5dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="5dp"
-        android:layout_marginBottom="100dp"
-        android:src="@drawable/main_img_giraffe"/>
+        android:layout_marginBottom="100dp">
+
+    </androidx.viewpager.widget.ViewPager>
+
+    <LinearLayout
+        android:id="@+id/dotsLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/slideViewPager"
+        android:layout_marginTop="-80dp"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"></LinearLayout>
 
     <LinearLayout
         android:id="@+id/startLayout"
