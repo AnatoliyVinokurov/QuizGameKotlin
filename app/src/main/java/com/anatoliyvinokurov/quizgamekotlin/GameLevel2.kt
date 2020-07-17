@@ -64,6 +64,7 @@ class GameLevel2 : AppCompatActivity() {
         buttonStart.setOnClickListener {
             try {
                 val intent = Intent(this@GameLevel2, MainActivity::class.java)
+                intent.putExtra("slideNumber", 1)
                 startActivity(intent)
                 finish()
             } catch (e:Exception) {
@@ -345,6 +346,7 @@ class GameLevel2 : AppCompatActivity() {
     override fun onBackPressed() {
         try {
             val intent = Intent(this@GameLevel2, MainActivity::class.java)
+            intent.putExtra("slideNumber", 1)
             startActivity(intent)
             finish()
         } catch (e:Exception) {

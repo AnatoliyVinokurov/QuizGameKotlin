@@ -10,17 +10,18 @@ import androidx.viewpager.widget.PagerAdapter
 
 
 class SliderAdapter(var context: Context) : PagerAdapter() {
+
     var layoutInflater: LayoutInflater? = null
 
     //Array
-    var slide_images = intArrayOf(
+    var slideImages = intArrayOf(
         R.drawable.main_img_giraffe,
         R.drawable.main_img_kangaroo,
         R.drawable.main_img_cheetah
     )
 
     override fun getCount(): Int {
-        return slide_images.size
+        return slideImages.size
     }
 
     override fun isViewFromObject(
@@ -37,7 +38,7 @@ class SliderAdapter(var context: Context) : PagerAdapter() {
             layoutInflater!!.inflate(R.layout.slide_layout, container, false)
         val slideImage =
             view.findViewById<View>(R.id.slideImage) as ImageView
-        slideImage.setImageResource(slide_images[position])
+        slideImage.setImageResource(slideImages[position])
         container.addView(view)
         return view
     }
