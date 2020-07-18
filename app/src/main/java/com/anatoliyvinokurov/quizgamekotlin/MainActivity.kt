@@ -222,20 +222,20 @@ class MainActivity : AppCompatActivity() {
     private fun rasstanovkaZamkov(){
 
             if (starsLevelOne < 15 ){ //if the user scored less than 15 points in the first level
-                sliderAdapter!!.slideImages[1] = (R.drawable.img_false) //lock
+                sliderAdapter!!.slideImages[1] = (R.drawable.main_img_locker) //lock
             } else { //if you score more than 15 points
                 if (levelOne[29] == 0) { // then we check whether he passed it? //if not passed
-                    sliderAdapter!!.slideImages[1] = (R.drawable.img_false)//lock
+                    sliderAdapter!!.slideImages[1] = (R.drawable.main_img_locker)//lock
                 }
                 //otherwise, we don't do anything, but let the program work
             }
 
 
             if (starsLevelTwo < 15 ) {
-                sliderAdapter!!.slideImages[2] = (R.drawable.img_false)
+                sliderAdapter!!.slideImages[2] = (R.drawable.main_img_locker)
             } else {
                 if (levelTwo[29] == 0) {
-                    sliderAdapter!!.slideImages[2] = (R.drawable.img_false)
+                    sliderAdapter!!.slideImages[2] = (R.drawable.main_img_locker)
                 }
             }
 
