@@ -1,14 +1,19 @@
 package com.anatoliyvinokurov.quizgamekotlin
 
+import android.app.Dialog
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Html
 import android.view.View
+import android.view.Window
 import android.view.WindowManager
 import android.widget.*
+import androidx.core.view.isInvisible
 import androidx.viewpager.widget.ViewPager
 import java.util.*
 import kotlin.Array
@@ -24,7 +29,10 @@ class MainActivity : AppCompatActivity() {
     private var dots: Array<TextView?> = arrayOfNulls(3)
     private var main_background: ImageView? = null
     private var buttonStart: Button? = null
+    private var buttonAbout: Button? = null
     private var currentPage = 0
+
+    var dialog: Dialog? = null
 
     private var slideNumber = 0
     var levelOne = IntArray(30)
@@ -48,6 +56,7 @@ class MainActivity : AppCompatActivity() {
 
         main_background = findViewById<ImageView>(R.id.main_background) as ImageView
         buttonStart = findViewById<Button>(R.id.button_start) as Button
+        buttonAbout = findViewById<Button>(R.id.button_about) as Button
 
         sliderAdapter = SliderAdapter(this)
         slideViewPager!!.setAdapter(sliderAdapter)
@@ -101,7 +110,45 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+        // code for on-screen About button
+        buttonAbout!!.setOnClickListener {
+            //-1-//call the dialog box at the beginning of the game
+            dialog = Dialog(this)//created a new dialog box
+            dialog!!.requestWindowFeature(Window.FEATURE_NO_TITLE) //hide dialog box title
+            dialog!!.setContentView(R.layout.previewdialog) //the path to the dialog box layout
+            dialog!!.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT)) //transparent dialog box background
+            dialog!!.setCancelable(false) // disallow closing the dialog box with the back button
+
+            //put the image
+            val previewimg = dialog!!.findViewById<ImageView>(R.id.previewimg)
+            previewimg.setImageResource(R.drawable.preview_img_three)
+            //put the text
+            val textdescription = dialog!!.findViewById<View>(R.id.textdescription) as TextView
+            textdescription.setText(R.string.aboutme)
+            //put the background image
+            val dialogfom = dialog!!.findViewById<LinearLayout>(R.id.dialogfom)
+            dialogfom.setBackgroundResource(R.drawable.preview_background_one)
+
+            //спрятал кнопку
+            // button to close the dialog box
+            val btnclose = dialog!!.findViewById<View>(R.id.btncloce) as TextView
+            btnclose.isInvisible = true //спрятал кнопку
+            //спрятал кнопку
+
+            // continue button
+            val btncontinue = dialog!!.findViewById<View>(R.id.btncontinue) as Button
+            btncontinue.setOnClickListener {
+                try {
+                    dialog!!.dismiss() //closes the dialog box
+                } catch (e:Exception){
+                }
+            }
+
+            dialog!!.show()//show dialog box
+        }
+
     }
+
     // code for system back button
     override fun onBackPressed() {
         //if the current time is + 2 seconds longer than the current time
@@ -245,49 +292,49 @@ class MainActivity : AppCompatActivity() {
         when (position) {
             0 -> {
                 if (levelOne[0] == 0) { //if the user did not play the game (first element of the first level = 0)
-                    buttonStart!!.text = "Начать1"
+                    buttonStart!!.setText(R.string.start)
                     buttonStart!!.isEnabled = true
                 } else { //otherwise (if you played the game)
-                    buttonStart!!.text = "Продолжить1"
+                    buttonStart!!.setText(R.string.textcontinue)
                     buttonStart!!.isEnabled = true
                 }
             }
             1 -> {
                 if (levelOne[29] == 0) { //if the value of the last element of the first level = 0
-                    buttonStart!!.text = "Начать2"
+                    buttonStart!!.setText(R.string.start)
                     buttonStart!!.isEnabled = false
                 } else { // иначе
                     if (starsLevelOne < 15) { // check whether the user has scored 15 points (passed the level successfully)
-                        buttonStart!!.text = "Начать2"
+                        buttonStart!!.setText(R.string.start)
                         buttonStart!!.isEnabled = false
                     } else {
-                        buttonStart!!.text = "Начать2"
+                        buttonStart!!.setText(R.string.start)
                         buttonStart!!.isEnabled = true
                     }
                 }
 
                 if (levelTwo[0] !== 0) { //if the user played the game (the first element of the first level is not zero)
-                    buttonStart!!.text = "Продолжить2"
+                    buttonStart!!.setText(R.string.textcontinue)
                     buttonStart!!.isEnabled = true
                 }
 
             }
             2 -> {
                 if (levelTwo[29] == 0) {
-                    buttonStart!!.text = "Начать3"
+                    buttonStart!!.setText(R.string.start)
                     buttonStart!!.isEnabled = false
                 } else {
                     if (starsLevelTwo < 15) {
-                        buttonStart!!.text = "Начать3"
+                        buttonStart!!.setText(R.string.start)
                         buttonStart!!.isEnabled = false
                     } else {
-                        buttonStart!!.text = "Начать3"
+                        buttonStart!!.setText(R.string.start)
                         buttonStart!!.isEnabled = true
                     }
                 }
 
                 if (levelThree[0] !== 0) {
-                    buttonStart!!.text = "Продолжить3"
+                    buttonStart!!.setText(R.string.textcontinue)
                     buttonStart!!.isEnabled = true
                 }
 

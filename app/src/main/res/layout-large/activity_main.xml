@@ -52,4 +52,28 @@
             android:textColor="@color/black95"
             android:textSize="50sp"/>
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/aboutMe"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="false"
+        android:layout_centerHorizontal="false"
+        android:layout_alignParentRight="true"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_about"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/style_btn_stroke_black95"
+            android:layout_weight="1"
+            android:text="@string/about"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/black95"
+            android:textSize="24sp"/>
+    </LinearLayout>
+
 </RelativeLayout>
