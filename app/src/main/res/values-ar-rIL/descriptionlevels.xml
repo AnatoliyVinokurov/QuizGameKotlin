@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="aboutme">מפתח אפליקציות לנייד: אנטולי וינוקורוב. \n n\  אוניברסיטת שלום עליכם. </string>
+    <string name="levelone">בחר את החיה שרצה מהר יותר. </string>
+    <string name="levelonefinishtrue">"מזל טוב! השלב הושלם! \n n\ הידעתם שהצ'יטה הוא הטורף המהיר ביותר? תוך כדי ריצה הוא מגיע למהירויות של עד 120 קמ"ש"</string>
+    <string name="levelonefinishfalse">"הרמה נכשלה. \n  n\ אין לך מספיק כוכבים כדי לגשת לשלב הבא. נסה להשלים את הרמה שוב"</string>
+    <string name="leveltwo">בחר את החיה שקפצה גבוה יותר.</string>
+    <string name="leveltwofinishtrue">"מזל טוב! השלב הושלם! \n n\ הידעתם שדולפין יכול לקפוץ מהמים עד לגובה של 3 מטרים? זה בקומה השנייה!"</string>
+    <string name="levelthree">בחר בעל חיים שהלשון שלו ארוכה יותר.</string>
+    <string name="levelthreefinishtrue">"מזל טוב! השלב הושלם! \n n\ הידעתם שהג'ירפה צריכה לשון כה ארוכה כדי להגיע לענפים בעלי עלים, הממוקמים גבוה על העץ"</string>
+</resources>

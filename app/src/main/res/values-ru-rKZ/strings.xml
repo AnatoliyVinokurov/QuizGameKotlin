@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Жануарлар викторинасы</string>
+    <string name="start">Бастау</string>
+    <string name="about">"?"</string>
+    <string name="back">кері</string>
+    <string name="level">Деңгей:</string>
+    <string name="exetpress">Шығу үшін қайта басыңыз</string>
+    <string name="level1">Деңгей 1</string>
+    <string name="textcontinue">жалғастыру</string>
+    <string name="textstartover">Қайтадан бастаңыз</string>
+    <string name="level2">Деңгей 2</string>
+    <string name="level3">Деңгей 3</string>
+</resources>

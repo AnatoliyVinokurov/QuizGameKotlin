@@ -129,11 +129,11 @@ class MainActivity : AppCompatActivity() {
             val dialogfom = dialog!!.findViewById<LinearLayout>(R.id.dialogfom)
             dialogfom.setBackgroundResource(R.drawable.preview_background_one)
 
-            //спрятал кнопку
+            //hid the button
             // button to close the dialog box
             val btnclose = dialog!!.findViewById<View>(R.id.btncloce) as TextView
-            btnclose.isInvisible = true //спрятал кнопку
-            //спрятал кнопку
+            btnclose.isInvisible = true //hid the button
+            //hid the button
 
             // continue button
             val btncontinue = dialog!!.findViewById<View>(R.id.btncontinue) as Button

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">חידון בעלי חיים</string>
+    <string name="start">להתחיל</string>
+    <string name="about">"?"</string>
+    <string name="back">לעזוב</string>
+    <string name="level">רמת:</string>
+    <string name="exetpress">לחץ שוב כדי לצאת</string>
+    <string name="level1">רמת 1</string>
+    <string name="textcontinue">המשך משחק</string>
+    <string name="textstartover">לחזור</string>
+    <string name="level2">רמת 2</string>
+    <string name="level3">רמת 3</string>
+</resources>
