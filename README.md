@@ -6,6 +6,9 @@
 
 Quiz about animals for children is designed to run on devices running the Android operating system version 4.4.2 (KitKat) and higher, written exclusively in Kotlin.
 
+This mobile game is published in Google Play Market and is available for download at the link. <a href="https://play.google.com/store/apps/details?id=com.anatoliyvinokurov.quizgamekotlin">link on Google Play Market</a>
+<a href="https://play.google.com/store/apps/developer?id=vinokurov1721">My developer page in Google Play Market</a>
+
 ### Main menu
 
 The main menu consists of slides with images of animals on it and a button at the bottom.

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="lvl1text0">Жалқау</string>
+    <string name="lvl1text1">Тасбақа</string>
+    <string name="lvl1text2">Панда</string>
+    <string name="lvl1text3">Түйе</string>
+    <string name="lvl1text4">Бегемот</string>
+    <string name="lvl1text5">Миркат</string>
+    <string name="lvl1text6">Маймыл</string>
+    <string name="lvl1text7">Піл</string>
+    <string name="lvl1text8">Бұқа</string>
+    <string name="lvl1text9">Жираф</string>
+    <string name="lvl1text10">Мүйізтұмсық</string>
+    <string name="lvl1text11">Зебра</string>
+    <string name="lvl1text12">Түйеқұс</string>
+    <string name="lvl1text13">Арыстан</string>
+    <string name="lvl1text14">Гепард</string>
+
+    <string name="lvl2text0">Скрипт</string>
+    <string name="lvl2text1">Жираф</string>
+    <string name="lvl2text2">Күшік</string>
+    <string name="lvl2text3">Жолбарыс</string>
+    <string name="lvl2text4">Лемур</string>
+    <string name="lvl2text5">Кенгуру</string>
+    <string name="lvl2text6">Қян</string>
+    <string name="lvl2text7">Ешкі</string>
+    <string name="lvl2text8">Жылқы</string>
+    <string name="lvl2text9">Котенка</string>
+    <string name="lvl2text10">Антилопа</string>
+    <string name="lvl2text11">Түлкі</string>
+    <string name="lvl2text12">Сілеусін</string>
+    <string name="lvl2text13">Дельфин</string>
+    <string name="lvl2text14">Пингвин</string>
+    <string name="lvl2text15">Гепард</string>
+
+
+    <string name="lvl3text0">Тиін</string>
+    <string name="lvl3text1">Лемур</string>
+    <string name="lvl3text2">Қызыл панда</string>
+    <string name="lvl3text3">Quokka</string>
+    <string name="lvl3text4">Коала</string>
+    <string name="lvl3text5">Бұрыншақ</string>
+    <string name="lvl3text6">Ешкі</string>
+    <string name="lvl3text7">Енот</string>
+    <string name="lvl3text8">Қоян</string>
+    <string name="lvl3text9">Мысық</string>
+    <string name="lvl3text10">Гепард</string>
+    <string name="lvl3text11">Бульдог</string>
+    <string name="lvl3text12">Түлкі</string>
+    <string name="lvl3text13">Арыстан</string>
+    <string name="lvl3text14">Жираф</string>
+</resources>
